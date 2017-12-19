@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AD16A3E-8617-41EC-8C36-502D21FFB616}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobilePhoneClassLiblrary</RootNamespace>
+    <AssemblyName>MobilePhoneClassLiblrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Components\Battery\Battery.cs" />
+    <Compile Include="Components\Battery\LiionBattery.cs" />
+    <Compile Include="Components\Battery\MiMHbattery.cs" />
+    <Compile Include="Components\Battery\NiCdbattery.cs" />
+    <Compile Include="Components\Battery\SLAbattery.cs" />
+    <Compile Include="Components\Camera.cs" />
+    <Compile Include="Components\ChargerFactory\Chargerfactory.cs" />
+    <Compile Include="Components\ChargerFactory\ICharger.cs" />
+    <Compile Include="Components\Headset\HeadsetFactory.cs" />
+    <Compile Include="Components\Headset\IPlayback.cs" />
+    <Compile Include="Components\IScreenImage.cs" />
+    <Compile Include="Components\Keyboard.cs" />
+    <Compile Include="Components\OperatingSystem.cs" />
+    <Compile Include="Components\PhoneDisplay\MultiTouchScreen.cs" />
+    <Compile Include="Components\PhoneDisplay\PhoneDisplay.cs" />
+    <Compile Include="Components\PhoneDisplay\SingleTouchScreen.cs" />
+    <Compile Include="Components\PhoneDisplay\Touch screen.cs" />
+    <Compile Include="Components\ScreenBase\ColorfulScreen.cs" />
+    <Compile Include="Components\ScreenBase\MonochromeScreen.cs" />
+    <Compile Include="Components\ScreenBase\OLEDScreen.cs" />
+    <Compile Include="Components\ScreenBase\RetinaScreen.cs" />
+    <Compile Include="Components\ScreenBase\ScreenBase.cs" />
+    <Compile Include="Components\SimCard.cs" />
+    <Compile Include="Components\SimCard\ISimCard.cs" />
+    <Compile Include="Components\SimCard\SimCardFactory.cs" />
+    <Compile Include="General\ConsoleOutput.cs" />
+    <Compile Include="General\IOutput.cs" />
+    <Compile Include="Phone\Mobile.cs" />
+    <Compile Include="Phone\SimCorpMobile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
